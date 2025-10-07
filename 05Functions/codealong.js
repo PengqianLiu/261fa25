@@ -5,6 +5,9 @@
 // Modularity – Each function has a clear purpose.
 // So far we've mostly using functions built-in to the language, now we're going to write our own functions! like neologisms! like 'truthiness'!
 
+
+// ALL THIS IN https://editor.p5js.org/
+
 // Function with one argument/parameter
 function cube(n) {
   // Returns the cube of the input number n
@@ -36,16 +39,16 @@ displayInstrument("Elizabeth", "Drum");
 displayInstrument("Susan", "Bass");
 
 // Function returning multiple outputs via an array
-function getInstruments() {
-  return ["Drum", "Guitar", "Bass"];
+function getFood() {
+  return ["bagel", "salad", "steak"];
 }
 
-let instruments = getInstruments(); // Destructure or access via index
-let primary = instruments[0];
-let secondary = instruments[1];
-let tertiary = instruments[2];
+let foods = getFood(); // Destructure or access via index
+let breakfast = foods[0];
+let lunch = foods[1];
+let dinner = foods[2];
 
-console.log("My Instruments are: " + primary + ", " + secondary + ", " + tertiary);
+console.log("I ate a "+breakfast);
 
 // Nested function calls
 function printLyrics() {
@@ -85,12 +88,13 @@ console.log(factorial(3)); // Output: 6
 function sumup(n) {
   let sum = 0;
   for (let i = 0; i <= n; i++) {
-    sum += i;
+	  sum += i; // addition assignment operator: adds the value on right to binding on left; rebinds what is on the left to the result of the calculation
   }
   return sum; 
 }
 console.log(sumup(5)); // Output: 15
 
+// local scope is like accidentals
 // Functions using local scope (instrument preference)
 function printFavoriteInstrument() {
   let instrument = prompt("What is your favorite instrument?");

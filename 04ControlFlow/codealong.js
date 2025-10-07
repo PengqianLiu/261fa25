@@ -7,6 +7,8 @@
 // MIDI protocol 101:
 // 0-127 with 0 as lowest value and 127 as highest
 
+let favMIDI = prompt("What's your favorite MIDI integer?")
+
 // *if* 
 // - Executes a block of code only if a specified condition is true.
 let midi = 64;
