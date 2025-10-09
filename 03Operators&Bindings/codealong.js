@@ -7,8 +7,7 @@
 // - We're going to use the 'sandbox' of the textbook: https://eloquentjavascript.net/code/
 
 // *Helpful console functions*
-console.log("Hello, world!"); // Prints text to the console
-console.clear(); // Clears the console output
+console.log("Hello, world!"); // Prints text to the console, a "side effect"
 
 
 // *Some Syntax Rules*
@@ -32,15 +31,15 @@ console.log(2 * 3); // Multiplication
 console.log(2 ** 3); // Exponentiation (2 raised to power of 3)
 console.log(10 % 3); // Modulus (remainder of division)
 // **Strings (sequences of characters, indexed from 0)**
-const myName = "Rachel";
+let myName = "Rachel";
 console.log(myName.length); // Get the length of the string
 console.log(myName[3]);     // Access character at index 3
 // ***String Methods***
-const favFood = "banana";
+let favFood = "banana";
 console.log(favFood.toUpperCase()); // Convert string to uppercase
 console.log(favFood.toLowerCase()); // Convert string to lowercase
 // ***Slicing strings (extracting parts of a string)***
-const favFood = "banana";
+let favFood = "banana";
 console.log(favFood.slice(0, 3)); 
 console.log(favFood.slice(2, 4));
 // ***Concatenation (combining strings)***
@@ -64,7 +63,7 @@ console.log(!true);         // false (NOT: negates the boolean value)
 
 
 // **Ternary Operator (Conditional Expression)**
-const height = 50;
+let height = 50;
 const canRide = (height > 48) ? "Yes, you may ride." : "Sorry, you may not ride.";
 console.log(canRide);
 
@@ -82,22 +81,27 @@ const area = pi * (radius ** 2);
 console.log(area);
 
 // *Typecasting (Converting Data Types)*
-const num = 100;
+let num = 100;
 console.log(String(num), typeof String(num)); // Convert number to string
 
-const string = "45";
+let string = "45";
 console.log(parseInt(string), typeof parseInt(string)); // Convert string to integer
 console.log(parseFloat("56.83"), typeof parseFloat("56.83")); // Convert string to float
 
 // *Floating point precision handling*
-const z = 3.141592653589793;
+let z = 3.141592653589793;
 console.log(z.toFixed(5)); // Ensures precision with 5 decimal places
 
 // Arrays
-const fruits = ["apple", "banana", "cherry"];
+let fruits = ["apple", "banana", "cherry"];
 console.log(fruits[0]); // Access first element
 fruits.push("blueberries"); // Add new element to array
 console.log(fruits);
 
 // Array Transversal with arrow function
 fruits.forEach(fruit => console.log(fruit));
+
+// prompt
+let height = prompt("What is your height in inches?");
+const canRide = (height > 48) ? "Yes, you may ride." : "Sorry, you may not ride.";
+console.log(canRide);
