@@ -7,7 +7,7 @@ Sketch your visual object using a pen and graph paper. Remember that your visual
 
 ![](./img/MusicalNote.png)
 
-It is recommended that your sketch uses basic primitive shapes, such as circle, ellipse, rectangle, square, triangle, and quadrilateral. Once you are done with your design, take a picture and include it in your mid-term project folder for submission with the name `Phase1` in it.
+It is recommended that your sketch uses b2d primitive shapes, such as circle, ellipse, rectangle, square, triangle, and quadrilateral. Once you are done with your design, take a picture and include it in your mid-term project folder for submission with the name `Phase1` in it.
 
 #### Sketch Requirements
 - Your sketch
@@ -19,7 +19,7 @@ It is recommended that your sketch uses basic primitive shapes, such as circle, 
 Using `P5.js`, translate your sketch into a computer graphic representation. P5.js works with a coordinate system. It is essential to realize that the computer screen is nothing more than a fancier piece of graph paper. Each pixel in the screen is a coordinate – two numbers, an `x` (horizontal) and a `y` (vertical) - that determines the location of a point in space. And it is our job to specify what shapes and colors should appear at these pixel coordinates. In the coordinate system for pixels in a computer window, the (0,0) point can be found at the top left with the positive direction to the right horizontally for the x-axis and down vertically for the y-axis. An understanding of this coordinate system will help us draw shapes and set the pixels we want.
 
 
-```
+```javascript
 function setup() {
   createCanvas(150, 150); // Set the size of canvas
   noStroke(); // Disable drawing the stroke
@@ -60,7 +60,7 @@ Now try calling the `drawObject()` function another time right after the first o
 
 Suppose we do not want the second function call to be affected by any transformations from the first function call. In that case, we need to use the `push()` and `pop()` functions to save and restore the current drawing style settings and transformations. Go back to the definition for the `drawObject()` function and add the `push()` function at the beginning. Add the `pop()` function at the end of the `drawObject()` function. The `push()` and `pop()` functions work in pairs and must always be present together. With these changes, your second function call in the `draw()` function should not affect the first function call.
 
-```
+```javascript
 function setup() {
   createCanvas(400, 400); // Set the size of canvas
   noStroke(); // Disable drawing the stroke

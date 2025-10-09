@@ -111,6 +111,7 @@ printLeastFavoriteInstrument();
 
 
 // MIDTERM PROJECT PREP
+// https://p5js.org/reference/
 
 // Count frames (prints continuously to console)
 function draw() {
@@ -221,7 +222,7 @@ function draw() {
   eye(20, 110);
 }
 
-// Interactive eye that follows mouse
+// Interactive eye that follows mouse just for fun
 function setup() {
   createCanvas(400, 400);
   noStroke();
