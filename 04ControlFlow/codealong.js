@@ -49,7 +49,7 @@ if (mmMIDI == 12) {
 }
 
 // Loops 
-// - allow us to repeat code multiple times.
+// - allow us to repeat code multiple times
 
 // *while* Loop
 let count = 0;
@@ -84,17 +84,7 @@ for (let i = 1500; i <= 2700; i++) {
 for (let row = "#"; row.length < 8; row += "#") // .js method length
   console.log(row);
 
-// Nested for-loop
-for (let i = 0; i < 10; i++) {
-	let row = ' '; //.js means print nothing
-  for (let j = 0; j < 10; j++) {
-    if (j >= i) {
-		row += j.toString(); // .js method add (append) to string
-    }
-  }
-  console.log(row);
-}
-
+// Nested for-loops
 //chessboard
 let size = 8;
 let board = "";
@@ -104,12 +94,23 @@ for (let y = 0; y < size; y++) {
     if ((x + y) % 2 == 0) {
       board += " ";
     } else {
-      board += "#";
+      board += "#"; // addition assignment operator: adds the value on right to binding on left; rebinds what is on the left to the result of the calculation
     }
   }
   board += "\n";
 }
 console.log(board);
+
+//columns vs rows
+for (let i = 0; i < 10; i++) {
+	let row = "\n"; 
+  for (let j = 0; j < 10; j++) {
+    if (j >= i) {
+		row += j.toString(); 
+    }
+  }
+  console.log(row);
+}
 
 // Recursion
 // - solve a problem with itself!
